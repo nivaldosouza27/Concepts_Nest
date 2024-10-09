@@ -1,4 +1,9 @@
-import { Module } from "@nestjs/common";
+import { Module } from '@nestjs/common';
+import { ConceptsManualController } from './concepts-manual.controller';
+import { ConceptsManualService } from './concepts-manual.service';
 
-@Module({})
-export class ConceptsManualModule { }
+@Module({
+  controllers: [ConceptsManualController],
+  providers: [ConceptsManualService],
+})
+export class ConceptsManualModule {}
