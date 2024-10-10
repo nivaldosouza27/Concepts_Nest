@@ -23,6 +23,9 @@ import { AppService } from './app.service';
         password: configService.get<string>('DB_PASSWORD'),
         autoLoadEntities: true,
         synchronize: true,
+        ssl: {
+          rejectUnauthorized: false,
+        },
       }),
     }),
   ],
